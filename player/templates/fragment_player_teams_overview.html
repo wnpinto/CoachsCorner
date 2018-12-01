@@ -1,0 +1,10 @@
+<div id="player_teams_info">
+    <div>Team List:</div>
+    {% for team in player_teams_list %}
+    <div>
+        Team Name: {{ team.team_id.name }}
+        Team sport: {{ team.team_id.sport.name }}
+        Team slogan: {{ team.team_id.slogan }}
+    </div>
+    {% endfor %}
+</div>

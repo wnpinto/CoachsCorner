@@ -1,0 +1,18 @@
+{% load static %}
+  <script type="text/javascript" src="{% static 'scripts/js/jquery-3.3.1.min.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/js/PlayerController.js' %}"></script>
+  <script type="text/javascript" src="{% static 'scripts/js/PlayerTeamController.js' %}"></script>
+
+<div id="player_info"></div>
+<div id="player_teams_info"></div>
+
+<button id="create-team-button">Create Team</button>
+<div id="create-new-team-form"></div>
+
+<script>
+    var playerController = new PlayerController();
+    playerController.submitAjaxRequest();
+
+    var playerTeamController = new PlayerTeamController();
+    playerTeamController.submitAjaxRequest();
+</script>

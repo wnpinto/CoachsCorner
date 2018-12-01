@@ -1,0 +1,8 @@
+<div id="create-new-team-form">
+    <form action="createnewteam" method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Create Team!">
+
+    </form>
+</div>

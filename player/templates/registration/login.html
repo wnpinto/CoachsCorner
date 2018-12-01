@@ -1,0 +1,12 @@
+{% load static %}
+
+<script src="{% static 'scripts/js/jquery-3.3.1.min.js' %}"></script>
+<script src="{% static 'scripts/js/login.js' %}"></script>
+
+<h2>Login</h2>
+<form method="post">
+  {% csrf_token %}
+  Username: <input name="username" type="text">
+  Password: <input name="password" type="password">
+  <button id="submit-login" type="submit">Login</button>
+</form>
