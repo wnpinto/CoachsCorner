@@ -6,6 +6,8 @@ from ..forms import CreateTeamForm
 
 from ..models import Sport, Team, TeamMember, Player
 
+from ..handlers import TeamHandler
+
 
 
 def createnewteam(request):
@@ -28,29 +30,11 @@ def createnewteam(request):
             team_sport = form.cleaned_data.get('team_sport')
             slogan = form.cleaned_data.get('slogan')
             player_number = form.cleaned_data.get('player_number')
-            sp = Sport.objects.filter(name=team_sport)
+            user = request.user
 
-            player = request.user.player
-
-            if not sp:
-                sport_obj = Sport()
-                sport_obj.name = team_sport
-                sport_obj.save()
-                sp = sport_obj
-            else:
-                sp = sp[0]
-
-            team_obj = Team()
-            team_obj.name = team_name
-            team_obj.sport_id = sp
-            team_obj.slogan = slogan
-            team_obj.save()
-
-            team_member_obj = TeamMember()
-            team_member_obj.player_id = player
-            team_member_obj.team_id = team_obj
-            team_member_obj.player_number = player_number
-            team_member_obj.save()
+            team_handler = TeamHandler()
+            sport = team_handler.get_or_create_sport(team_sport)
+            team_handler.create_new_team(user, team_name, slogan, sport, player_number)
 
             return redirect(settings.LOGIN_REDIRECT_URL)
 

@@ -1,7 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="4bd1da5f-f55d-4563-922d-a88fc96a0573" name="Default Changelist" comment="" />
+    <list default="true" id="4bd1da5f-f55d-4563-922d-a88fc96a0573" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/api/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/api/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/player/views/form_views.py" beforeDir="false" afterPath="$PROJECT_DIR$/player/views/form_views.py" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,7 +26,7 @@
         <counts>
           <entry key="html" value="26" />
           <entry key="js" value="11" />
-          <entry key="py" value="86" />
+          <entry key="py" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.open">
@@ -29,14 +34,14 @@
           <entry key="HTML" value="26" />
           <entry key="JavaScript" value="8" />
           <entry key="PLAIN_TEXT" value="3" />
-          <entry key="Python" value="86" />
+          <entry key="Python" value="89" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.extensions.edit">
         <counts>
           <entry key="html" value="1355" />
           <entry key="js" value="709" />
-          <entry key="py" value="5242" />
+          <entry key="py" value="5987" />
         </counts>
       </usages-collector>
       <usages-collector id="statistics.file.types.edit">
@@ -44,7 +49,7 @@
           <entry key="HTML" value="1355" />
           <entry key="JavaScript" value="258" />
           <entry key="PLAIN_TEXT" value="451" />
-          <entry key="Python" value="5242" />
+          <entry key="Python" value="5987" />
         </counts>
       </usages-collector>
     </session>
@@ -52,69 +57,38 @@
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/player/models.py">
+        <entry file="file://$PROJECT_DIR$/api/views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="33" column="6" selection-start-line="33" selection-start-column="6" selection-end-line="33" selection-end-column="6" />
+            <state relative-caret-position="442">
+              <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
               <folding>
-                <element signature="e#0#28#0" expanded="true" />
-                <marker date="1543387943879" expanded="true" signature="764:769" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/serializers.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="51">
-              <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-              <folding>
-                <marker date="1543630012823" expanded="true" signature="126:131" ph="..." />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/urls.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="136">
-              <caret line="11" column="43" selection-start-line="11" selection-start-column="43" selection-end-line="11" selection-end-column="43" />
-              <folding>
-                <element signature="e#0#41#0" expanded="true" />
+                <element signature="e#0#43#0" expanded="true" />
+                <marker date="1543785236497" expanded="true" signature="430:431" ph="..." />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CoachsCorner/settings.py">
+        <entry file="file://$PROJECT_DIR$/player/views/form_views.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="245">
-              <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/api/views.py">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="6">
-              <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+            <state relative-caret-position="425">
+              <caret line="36" column="87" selection-start-line="36" selection-start-column="87" selection-end-line="36" selection-end-column="87" />
               <folding>
-                <element signature="e#0#43#0" expanded="true" />
-                <marker date="1543631341075" expanded="true" signature="430:431" ph="..." />
+                <element signature="e#0#45#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
-        <entry file="file://C:/Program Files (x86)/Python/Lib/site-packages/rest_framework/views.py">
+        <entry file="file://$PROJECT_DIR$/player/handlers/TeamHandler.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="8109">
-              <caret line="494" selection-start-line="494" selection-end-line="494" />
+            <state relative-caret-position="136">
+              <caret line="8" column="77" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="77" />
+              <folding>
+                <marker date="1543786252321" expanded="true" signature="144:149" ph="..." />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -144,7 +118,7 @@
     </findStrings>
   </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/CoachsCorner2Backend" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
     <setting file="file://$PROJECT_DIR$/api/views.py" root0="SKIP_INSPECTION" />
@@ -177,21 +151,22 @@
         <option value="$PROJECT_DIR$/player/templates/fragment_create_new_team_form.html" />
         <option value="$PROJECT_DIR$/player/urls.py" />
         <option value="$PROJECT_DIR$/player/views/views.py" />
-        <option value="$PROJECT_DIR$/player/views/form_views.py" />
         <option value="$PROJECT_DIR$/player/forms.py" />
         <option value="$PROJECT_DIR$/player/models.py" />
         <option value="$PROJECT_DIR$/player/templates/fragment_player_teams_overview.html" />
         <option value="$PROJECT_DIR$/CoachsCorner/urls.py" />
         <option value="$PROJECT_DIR$/api/serializers.py" />
-        <option value="$PROJECT_DIR$/api/views.py" />
         <option value="$PROJECT_DIR$/api/urls.py" />
         <option value="$PROJECT_DIR$/CoachsCorner/settings.py" />
+        <option value="$PROJECT_DIR$/api/views.py" />
+        <option value="$PROJECT_DIR$/player/handlers/TeamHandler.py" />
+        <option value="$PROJECT_DIR$/player/views/form_views.py" />
       </list>
     </option>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="1228" />
-    <option name="width" value="699" />
+    <option name="x" value="953" />
+    <option name="width" value="974" />
     <option name="height" value="1047" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -206,6 +181,17 @@
             <path>
               <item name="CoachsCorner" type="b2602c69:ProjectViewProjectNode" />
               <item name="CoachsCorner" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoachsCorner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoachsCorner" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="CoachsCorner" type="b2602c69:ProjectViewProjectNode" />
+              <item name="CoachsCorner" type="462c0819:PsiDirectoryNode" />
+              <item name="player" type="462c0819:PsiDirectoryNode" />
+              <item name="handlers" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -313,19 +299,19 @@
     <frame x="-8" y="-8" width="1936" height="1056" extended-state="6" />
     <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.25479743" />
+      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.053304903" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
       <window_info anchor="bottom" id="Find" order="1" />
       <window_info anchor="bottom" id="Run" order="2" sideWeight="0.81291026" weight="0.3258427" />
-      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8022388" visible="true" weight="0.6173526" />
+      <window_info anchor="bottom" id="Debug" order="3" sideWeight="0.8022388" weight="0.6173526" />
       <window_info anchor="bottom" id="Cvs" order="4" weight="0.25" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
       <window_info anchor="bottom" id="TODO" order="6" sideWeight="0.49946696" weight="0.32925472" />
       <window_info anchor="bottom" id="Version Control" order="7" show_stripe_button="false" />
-      <window_info anchor="bottom" id="Terminal" order="8" sideWeight="0.79102844" weight="0.81891894" />
-      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.1977612" side_tool="true" visible="true" weight="0.6173526" />
+      <window_info active="true" anchor="bottom" id="Terminal" order="8" sideWeight="0.7905117" visible="true" weight="0.26585093" />
+      <window_info anchor="bottom" id="Event Log" order="9" sideWeight="0.20948827" side_tool="true" visible="true" weight="0.26585093" />
       <window_info anchor="bottom" id="Python Console" order="10" sideWeight="0.49946696" weight="0.32925472" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -349,9 +335,6 @@
     </breakpoint-manager>
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/player/__init__.py">
-      <provider selected="true" editor-type-id="text-editor" />
-    </entry>
     <entry file="file://C:/Program Files (x86)/Python/Lib/site-packages/django/urls/conf.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="171">
@@ -524,13 +507,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/player/views/form_views.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="221">
-          <caret line="19" column="22" selection-start-line="19" selection-start-column="22" selection-end-line="19" selection-end-column="22" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/player/forms.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="51">
@@ -642,21 +618,41 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/CoachsCorner/settings.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="442">
+          <caret line="132" column="5" lean-forward="true" selection-start-line="132" selection-start-column="5" selection-end-line="132" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/api/views.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="6">
-          <caret line="23" column="14" selection-start-line="23" selection-start-column="14" selection-end-line="23" selection-end-column="14" />
+        <state relative-caret-position="442">
+          <caret line="65" lean-forward="true" selection-start-line="65" selection-end-line="65" />
           <folding>
             <element signature="e#0#43#0" expanded="true" />
-            <marker date="1543631341075" expanded="true" signature="430:431" ph="..." />
+            <marker date="1543785236497" expanded="true" signature="430:431" ph="..." />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CoachsCorner/settings.py">
+    <entry file="file://$PROJECT_DIR$/player/handlers/TeamHandler.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="245">
-          <caret line="136" lean-forward="true" selection-start-line="136" selection-end-line="136" />
+        <state relative-caret-position="136">
+          <caret line="8" column="77" selection-start-line="8" selection-start-column="30" selection-end-line="8" selection-end-column="77" />
+          <folding>
+            <marker date="1543786252321" expanded="true" signature="144:149" ph="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/player/views/form_views.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="425">
+          <caret line="36" column="87" selection-start-line="36" selection-start-column="87" selection-end-line="36" selection-end-column="87" />
+          <folding>
+            <element signature="e#0#45#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
