@@ -2,6 +2,7 @@ from ..models import Team, TeamMember, Sport, User
 
 
 class TeamHandler:
+
     """
     Handler class that processes any Team related logid
     """
@@ -41,3 +42,29 @@ class TeamHandler:
             return sport_obj
 
         return existing_sport[0]
+
+    def get_teams_list(self, user):
+        """
+        Returns a list of all the teams a user is part of
+
+        :param user:
+        :return:
+        """
+        player = user.player
+
+        team_member_list = TeamMember.objects.filter(player_id=player.id)
+
+        team_list = []
+
+        for team_member in team_member_list:
+            team = team_member.team_id
+
+            team_list.append(
+                {
+                    'team_name': team.name,
+                    'team_rating': team.rating,
+                    'team_member_player_number': team_member.player_number
+                }
+            )
+
+        return team_list

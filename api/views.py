@@ -6,7 +6,7 @@ from rest_framework.authentication import TokenAuthentication
 from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from player.models import Player, Team, TeamMember
 from api.serializers import PlayerSerializer
-
+from player.handlers.TeamHandler import TeamHandler
 
 
 class PlayerInfoView(APIView):
@@ -33,21 +33,11 @@ class PlayerTeamListView(APIView):
     renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
 
     def get(self, request,  *args, **kwargs):
-        player = request.user.player
-        team_member_list = TeamMember.objects.filter(player_id=player.id)
 
-        team_list = []
+        user = request.user
+        team_handler = TeamHandler()
 
-        for team_member in team_member_list:
-            team = team_member.team_id
-
-            team_list.append(
-                {
-                    'team_name': team.name,
-                    'team_rating': team.rating,
-                    'team_member_player_number': team_member.player_number
-                }
-            )
+        team_list = team_handler.get_teams_list(user=user)
 
         return Response(
             {

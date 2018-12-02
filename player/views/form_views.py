@@ -1,13 +1,7 @@
 from django.shortcuts import render, redirect
-
 from player import settings
-
 from ..forms import CreateTeamForm
-
-from ..models import Sport, Team, TeamMember, Player
-
-from ..handlers import TeamHandler
-
+from ..handlers.TeamHandler import TeamHandler
 
 
 def createnewteam(request):
