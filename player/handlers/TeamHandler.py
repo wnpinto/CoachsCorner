@@ -8,11 +8,21 @@ class TeamHandler:
     """
 
     def create_new_team(self, user, team_name, slogan, sport, user_jersey_num):
+        """
+        Creates a new team instance for the user and the sport provided.
+
+        :param user:
+        :param team_name:
+        :param slogan:
+        :param sport:
+        :param user_jersey_num:
+        :return:
+        """
         player = user.player
 
         team_obj = Team()
         team_obj.name = team_name
-        team_obj.sport_id = sport.id
+        team_obj.sport_id = sport
         team_obj.slogan = slogan
         team_obj.save()
 

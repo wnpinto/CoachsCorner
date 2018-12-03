@@ -7,6 +7,7 @@ from rest_framework.renderers import JSONRenderer, TemplateHTMLRenderer
 from player.models import Player, Team, TeamMember
 from api.serializers import PlayerSerializer
 from player.handlers.TeamHandler import TeamHandler
+from player.validators.TeamValidator import TeamValidator
 
 
 class PlayerInfoView(APIView):
@@ -45,3 +46,37 @@ class PlayerTeamListView(APIView):
             },
             status=status.HTTP_200_OK
         )
+
+class AddNewTeamView(APIView):
+    """
+    Creates a new team instance for the user and the sport provided.
+    """
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+
+    def post(self, request, format=None):
+
+        user = request.user
+        data = request.data
+        team_name = data.get('team_name', None)
+        slogan = data.get('slogan', None)
+        sport = data.get('sport', None)
+        jersey_num = data.get('jersey_num', None)
+
+
+        team_validator = TeamValidator()
+
+        if team_validator.validate_team(team_name=team_name, slogan=slogan, sport=sport, user_jersey_num=jersey_num):
+            team_handler = TeamHandler()
+            sp = team_handler.get_or_create_sport(sport)
+            team_handler.create_new_team(user=user, team_name=team_name, slogan=slogan, sport=sp, user_jersey_num=jersey_num)
+            return Response(
+            {},
+            status=status.HTTP_200_OK
+            )
+        else:
+            return Response(
+        {
+            'result': 'Validation failed for creating a new team'
+        },
+        status=status.HTTP_400_BAD_REQUEST
+    )
