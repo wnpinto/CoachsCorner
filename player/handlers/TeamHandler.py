@@ -78,3 +78,46 @@ class TeamHandler:
             )
 
         return team_list
+
+    def get_team_list(self):
+        """
+        Returns a list of all the teams
+
+        :param user:
+        :return:
+        """
+
+        team_list = Team.objects.all()
+
+        list = []
+
+        for team in team_list:
+
+            list.append(
+                {
+                    'team_name': team.name,
+                    'team_rating': team.rating,
+                    'sport': team.sport_id.name
+                }
+            )
+
+        return list
+
+    def add_new_team_member(self, user, team_name, sport, user_jersey_num):
+        """
+        adds a player to a team. Must specify the sport since one team can have multiple sports.
+
+        :param user:
+        :param team_name:
+        :param sport:
+        :return:
+        """
+
+        team = Team.objects.filter(name=team_name, sport_id__name=sport)
+        new_team_member = TeamMember()
+        new_team_member.team_id = team[0]
+        new_team_member.player_id = user.player
+        new_team_member.player_number = user_jersey_num
+        new_team_member.save()
+
+        return new_team_member

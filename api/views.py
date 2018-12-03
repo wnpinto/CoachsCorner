@@ -80,3 +80,55 @@ class AddNewTeamView(APIView):
         },
         status=status.HTTP_400_BAD_REQUEST
     )
+
+class TeamListView(APIView):
+    """
+    Returns a list of all the teams.
+    List includes: Team Name, Team Sport and Team Rating
+    """
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+
+    def get(self, request,  *args, **kwargs):
+        team_handler = TeamHandler()
+
+        team_list = team_handler.get_team_list()
+
+        return Response(
+            {
+                'team_list': team_list
+            },
+            status=status.HTTP_200_OK
+        )
+
+class AddNewTeamMemberView(APIView):
+    """
+    Adds a new team member to the specified team and team sport.
+
+    """
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+
+    def post(self, request, format=None):
+
+        user = request.user
+        data = request.data
+        team_name = data.get('team_name', None)
+        sport = data.get('sport', None)
+        jersey_num = data.get('jersey_num', None)
+
+
+        team_validator = TeamValidator()
+
+        if team_validator.validate_new_team_member(user=user, team_name=team_name, sport=sport, user_jersey_num=jersey_num):
+            team_handler = TeamHandler()
+            team_handler.add_new_team_member(user=user, team_name=team_name, sport=sport, user_jersey_num=jersey_num)
+            return Response(
+            {},
+            status=status.HTTP_200_OK
+            )
+        else:
+            return Response(
+        {
+            'result': 'Validation failed for adding a new team member'
+        },
+        status=status.HTTP_400_BAD_REQUEST
+    )
