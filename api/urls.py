@@ -1,7 +1,8 @@
 from django.conf.urls import url, include
 from rest_framework import routers
 from api import views
-from .views import PlayerInfoView, PlayerTeamListView, AddNewTeamView, TeamListView, AddNewTeamMemberView
+from .views import PlayerInfoView, PlayerTeamListView, AddNewTeamView, TeamListView, \
+    TeamMembersListView, AddNewTeamMemberView
 
 
 # Wire up our API using automatic URL routing.
@@ -11,6 +12,7 @@ urlpatterns = [
     url(r'^getPlayerInfo/', PlayerInfoView.as_view(), name='player_info'),
     url(r'^getPlayerTeamList/', PlayerTeamListView.as_view(), name='player_team_list'),
     url(r'^getTeamList/', TeamListView.as_view(), name='team_list'),
+    url(r'^getTeamMembersList/(?P<pk>[0-9]+)/$', TeamMembersListView.as_view(), name='team_members_list'),
 
     # --- posts
     url(r'^addNewTeam/', AddNewTeamView.as_view(), name='add_new_team'),

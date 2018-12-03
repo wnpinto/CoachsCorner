@@ -100,9 +100,28 @@ class TeamListView(APIView):
             status=status.HTTP_200_OK
         )
 
+class TeamMembersListView(APIView):
+    """
+    Returns a list of all the teams.
+    List includes: Team Name, Team Sport and Team Rating
+    """
+    renderer_classes = (JSONRenderer, TemplateHTMLRenderer)
+
+    def get(self, request,  *args, **kwargs):
+        team_handler = TeamHandler()
+
+        team_memebrs_list = team_handler.get_team_members(team=kwargs.get('pk', None))
+
+        return Response(
+            {
+                'team_memebrs_list': team_memebrs_list
+            },
+            status=status.HTTP_200_OK
+        )
+
 class AddNewTeamMemberView(APIView):
     """
-    Adds a new team member to the specified team and team sport.
+    Adds a new team member to the specified team id.
 
     """
     renderer_classes = (JSONRenderer, TemplateHTMLRenderer)

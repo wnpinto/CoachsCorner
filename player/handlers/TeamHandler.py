@@ -79,6 +79,29 @@ class TeamHandler:
 
         return team_list
 
+    def get_team_members(self, team):
+        """
+        Returns a list of all the team members of an existing team
+
+        :param team:
+        :return:
+        """
+
+        team_members = TeamMember.objects.filter(team_id__id=team)
+
+        team_member_list = []
+
+        for team_member in team_members:
+            team_member_list.append(
+                {
+                    'sport': team_member.team_id.sport_id.name,
+                    'player_name': team_member.player_id.user.first_name,
+                    'player_number': team_member.player_number,
+                }
+            )
+
+        return team_member_list
+
     def get_team_list(self):
         """
         Returns a list of all the teams
